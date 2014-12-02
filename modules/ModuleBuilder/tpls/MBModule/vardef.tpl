@@ -42,6 +42,9 @@ $dictionary['{{$class.name}}'] = array(
 	{{/if}}
 	'fields'=>{{$class.fields_string}},
 	'relationships'=>{{$class.relationships}},
+	{{if ! empty($class.indices)}}
+	'indices'=>{{$class.indices}},
+	{{/if}}
 	'optimistic_locking'=>true,
 	{{if !empty($class.table_name) && !empty($class.templates)}}
 	'unified_search'=>true,

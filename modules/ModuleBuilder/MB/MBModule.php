@@ -460,6 +460,11 @@ class MBModule
         $class [ 'fields_string' ] = var_export_helper ( $this->mbvardefs->vardef [ 'fields' ] ) ;
         $relationship = array ( ) ;
         $class [ 'relationships' ] = var_export_helper ( $this->mbvardefs->vardef [ 'relationships' ] ) ;
+        
+        if ( ! empty($this->mbvardefs->vardef [ 'indices' ]) ) {
+          $class [ 'indices' ] = var_export_helper ( $this->mbvardefs->vardef [ 'indices' ] ) ;
+        }
+        
         $smarty = new Sugar_Smarty ( ) ;
         $smarty->left_delimiter = '{{' ;
         $smarty->right_delimiter = '}}' ;
