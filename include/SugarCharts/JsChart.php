@@ -712,11 +712,17 @@ class JsChart extends SugarChart {
 		$replacement = array();
 		$content = file_get_contents($xmlFile);
 		$content = $GLOBALS['locale']->translateCharset($content,'UTF-16LE', 'UTF-8');
-		$pattern[] = '/\<link\>([a-zA-Z0-9#?&%.;\[\]\/=+_-\s]+)\<\/link\>/e';
+ /* preg_replace /e was deprecated in php 5.5
+the original line was commented out and the fix was added below */
+		//$pattern[] = '/\<link\>([a-zA-Z0-9#?&%.;\[\]\/=+_-\s]+)\<\/link\>/e';
+		$pattern[] = '/\<link\>([a-zA-Z0-9#?&%.;\[\]\/=+_-\s]+)\<\/link\>/';
 		$replacement[] = "'<link>'.urlencode(\"$1\").'</link>'";
 //		$pattern[] = '/NULL/e';
 //		$replacement[] = "";
-		return preg_replace($pattern,$replacement, $content);
+ /* preg_replace /e was deprecated in php 5.5
+the original line was commented out and the fix was added below */
+		#return preg_replace($pattern,$replacement, $content);
+		return preg_replace_callback($pattern,$replacement, $content);
 	}
 
 
