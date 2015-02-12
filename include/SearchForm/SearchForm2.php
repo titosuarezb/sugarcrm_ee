@@ -725,7 +725,12 @@ require_once('include/EditView/EditView2.php');
 
              if(isset($parms['value']) && $parms['value'] != "") {
 
-                 $operator = $db->isNumericType($type)?'=':'like';
+                 $operator = '=';
+                 
+                 if (strpos($parms['value'],'%') !== FALSE ) {
+                   $operator = 'like';
+                 }
+                 
                  if(!empty($parms['operator'])) {
                      $operator = strtolower($parms['operator']);
                  }
