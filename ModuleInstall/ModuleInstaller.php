@@ -1802,10 +1802,18 @@ class ModuleInstaller{
 					$dir = dir($module_install);
 					$shouldSave = true;
 					$override = array();
+          $arrEntries = array();
 					while($entry = $dir->read()){
 						if((empty($filter) || substr_count($entry, $filter) > 0) && is_file($module_install.'/'.$entry)
 						  && $entry != '.' && $entry != '..' && strtolower(substr($entry, -4)) == ".php")
 						{
+              $arrEntries[] = $entry;
+            }
+					}
+          
+          sort($arrEntries);
+          
+          foreach( $arrEntries as $entry ){
 						     if (substr($entry, 0, 9) == '_override') {
 						    	$override[] = $entry;
 						    } else {
@@ -1814,7 +1822,7 @@ class ModuleInstaller{
 							    $extension .= "\n". str_replace(array('<?php', '?>', '<?PHP', '<?'), array('','', '' ,'') , $file);
 						    }
 						}
-					}
+          
 					foreach ($override as $entry) {
                         $file = file_get_contents($module_install . '/' . $entry);
                         $extension .= "\n". str_replace(array('<?php', '?>', '<?PHP', '<?'), array('','', '' ,'') , $file);
@@ -1844,6 +1852,9 @@ class ModuleInstaller{
 		$extpath = "application/$path";
 		$module_install  = 'custom/Extension/'.$extpath;
 		$shouldSave = false;
+    
+          $arrEntries = array();
+    
 					if(is_dir($module_install)){
 						$dir = dir($module_install);
 						while($entry = $dir->read()){
@@ -1851,11 +1862,19 @@ class ModuleInstaller{
 								if((empty($filter) || substr_count($entry, $filter) > 0) && is_file($module_install.'/'.$entry)
 								  && $entry != '.' && $entry != '..' && strtolower(substr($entry, -4)) == ".php")
 								{
-									$file = file_get_contents($module_install . '/' . $entry);
-									$extension .= "\n". str_replace(array('<?php', '?>', '<?PHP', '<?'), array('','', '' ,'') , $file);
-								}
+                  $arrEntries[] = $entry;
+                }
 						}
+            
+            sort($arrEntries);
+            
+            foreach ( $arrEntries as $entry ) {
+              $file = file_get_contents($module_install . '/' . $entry);
+              $extension .= "\n". str_replace(array('<?php', '?>', '<?PHP', '<?'), array('','', '' ,'') , $file);
+            }
+            
 					}
+          
 					$extension .= "\n?>";
 					if($shouldSave){
 						if(!file_exists("custom/$extpath")){

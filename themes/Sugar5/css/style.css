@@ -1006,6 +1006,30 @@ table.subpanelTabForm
     border-top: 0px none; 
     margin-bottom: 4px;
 }
+
+/* Improve subpanels */
+.subpanelTabForm #subpanel_list .h3Row{
+  border-top: none;
+}
+
+.subpanelTabForm ul#subpanel_list > li{
+  margin-bottom: 12px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.2);
+}
+
+#groupTabs.subpanelTablist{
+  margin-top: 30px;
+}
+
+.subpanelTabForm ul#subpanel_list > li:nth-child(even){
+  background: rgb(245, 235, 255);
+}
+
+.subpanelTabForm ul#subpanel_list > li:nth-child(odd){
+  background: rgb(244, 255, 244);
+}
+
+
 /* gantt styles */
 table.days {
     font-family: Tahoma, Arial, Verdana, Helvetica, sans-serif;
@@ -2600,6 +2624,7 @@ ul.subTabs li a:link, ul.subTabs li a:visited
     padding:0.4em 0 0.3em 1em;
 	border-bottom: none;
 	border-top: 2px solid;
+  min-height: 1.6em;
 }
 #subModuleList span a
 {
@@ -4084,3 +4109,22 @@ ul.clickMenu li ul.subnav li a:hover .showLessArrow, ul.clickMenu li ul.subnav l
 
 div.action_buttons form {float:left;}
 .paginationWrapper { float:right; }
+
+/* Correct Chart overlays */
+.tip {
+  background: #fff;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.2);
+  opacity: .9;
+}
+
+.chartContainer .legend td{
+  padding: 2px 0px;
+}
+
+.chartContainer .legend td.label{
+  padding-left: 3px;
+  padding-right: 18px;
+}

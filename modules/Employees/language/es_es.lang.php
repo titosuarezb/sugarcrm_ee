@@ -1,33 +1,53 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-/*********************************************************************************
- * The contents of this file are subject to the SugarCRM Public License Version
- * 1.1.3 ("License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * All copies of the Covered Code must include on each user interface screen:
- *    (i) the "Powered by SugarCRM" logo and
- *    (ii) the SugarCRM copyright notice
- * in the same form as they appear in the distribution.  See full license for
- * requirements.
- *
- * The Original Code is: SugarCRM Enterprise
- * The Initial Developer of the Original Code is SugarCRM, Inc.
- * Portions created by SugarCRM are Copyright (C) 2004-2010 SugarCRM, Inc.;
- * All Rights Reserved.
- ********************************************************************************/
-/*********************************************************************************
- * Description:  Defines the Spanish language pack for the base application.
- * $Id: es_es.lang.php,v 1.10 2010/10/31 17:43:08 aserrano Exp $
- * Source: SugarCRM 6.1.0RC2
- * Contributor(s): Alberto Serrano (alb.serrano@gmail.com).
- ********************************************************************************/
 
-$mod_strings = array (
+if ( ! defined('sugarEntry') || ! sugarEntry) {
+  die('Not A Valid Entry Point');
+}
+
+/* * *******************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ * ****************************************************************************** */
+
+/* * *******************************************************************************
+
+ * Description:  Defines the Spanish language pack for the base application.
+ * Portions created by Tito Suarez Buitrago.
+ * All Rights Reserved.
+ * Contributor(s): Tito Suarez Buitrago - http://github.com/titosuarezb/
+ * ****************************************************************************** */
+
+$mod_strings = array(
   'LBL_MODULE_NAME' => 'Empleados',
   'LBL_MODULE_TITLE' => 'Empleados: Inicio',
   'LBL_SEARCH_FORM_TITLE' => 'Búsqueda de Empleados',
@@ -48,7 +68,6 @@ $mod_strings = array (
   'LBL_LIST_EMAIL' => 'Email',
   'LBL_LIST_PRIMARY_PHONE' => 'Teléfono Principal',
   'LBL_LIST_USER_NAME' => 'Nombre de Usuario',
-  'LBL_LIST_EMPLOYEE_STATUS' => 'Estado del Empleado',
   'LBL_LIST_ADMIN' => 'Admin',
   'LBL_NEW_EMPLOYEE_BUTTON_TITLE' => 'Nuevo Empleado [Alt+N]',
   'LBL_NEW_EMPLOYEE_BUTTON_LABEL' => 'Nuevo Empleado',
@@ -57,6 +76,7 @@ $mod_strings = array (
   'LBL_PASSWORD' => 'Contraseña:',
   'LBL_EMPLOYEE_NAME' => 'Nombre de Empleado:',
   'LBL_USER_NAME' => 'Nombre de Usuario:',
+  'LBL_USER_TYPE' => 'Tipo de Usuario',
   'LBL_FIRST_NAME' => 'Nombre:',
   'LBL_LAST_NAME' => 'Apellido:',
   'LBL_EMPLOYEE_SETTINGS' => 'Preferencias del Empleado',
@@ -84,7 +104,9 @@ $mod_strings = array (
   'LBL_MOBILE_PHONE' => 'Móvil:',
   'LBL_OTHER' => 'Otro:',
   'LBL_FAX' => 'Fax:',
-  'LBL_EMAIL' => 'Correo electrónico:',
+  'LBL_EMAIL' => 'Correo Electrónico:',
+  'LBL_EMAIL_LINK_TYPE' => 'Cliente de Correo',
+  'LBL_EMAIL_LINK_TYPE_HELP' => '<b>Cliente de Correo Sugar:</b> Enviar correos usando el cliente de correo de la aplicación Sugar.<br><b>Cliente de Correo Externo:</b> Enviar correo usando un cliente de correo externo a la aplicación Sugar, como Microsoft Outlook.',
   'LBL_HOME_PHONE' => 'Tel. Casa:',
   'LBL_WORK_PHONE' => 'Tel. Trabajo:',
   'LBL_ADDRESS_INFORMATION' => 'Información de Dirección',
@@ -97,28 +119,46 @@ $mod_strings = array (
   'LBL_FAVORITE_COLOR' => 'Color Favorito:',
   'LBL_MESSENGER_ID' => 'Nombre MI:',
   'LBL_MESSENGER_TYPE' => 'Tipo MI:',
-  'ERR_EMPLOYEE_NAME_EXISTS_1' => 'El nombre del empleado ',
-  'ERR_EMPLOYEE_NAME_EXISTS_2' => ' ya existe.  No se permiten empleados duplicados.  Cambie el nombre del empleado para que sea único.',
+  'ERR_EMPLOYEE_NAME_EXISTS_1' => 'El nombre del empleado',
+  'ERR_EMPLOYEE_NAME_EXISTS_2' => 'ya existe.  No se permiten empleados duplicados.  Cambie el nombre del empleado para que sea único.',
   'ERR_LAST_ADMIN_1' => 'El nombre del empleado "',
   'ERR_LAST_ADMIN_2' => '" es el último empleado con permisos de administrador.  Al menos un empleado debe ser un administrador.',
   'LNK_NEW_EMPLOYEE' => 'Crear Empleado',
   'LNK_EMPLOYEE_LIST' => 'Ver Empleados',
   'ERR_DELETE_RECORD' => 'Debe especificar un número de registro para eliminar el empleado.',
-  'LBL_DEFAULT_TEAM' => 'Equipo por Defecto:',
-  'LBL_DEFAULT_TEAM_TEXT' => 'Selecciona el equipo por defecto para nuevos registros',
-  'LBL_MY_TEAMS' => 'Mis Equipos',
-  'LBL_LIST_DESCRIPTION' => 'Descripción',
-  'LNK_EDIT_TABS' => 'Editar Pestañas',
-  'NTC_REMOVE_TEAM_MEMBER_CONFIRMATION' => '¿Está seguro de que desea quitar a este empleado del equipo?',
-  'LBL_SUGAR_LOGIN' => 'Es Usuario de Sugar',  
-  'LBL_RECEIVE_NOTIFICATIONS' => 'Notificar al ser Asignado',  
-  'LBL_IS_ADMIN' => 'Es Administrador',  
+  'LBL_LIST_EMPLOYEE_STATUS' => 'Estado del Empleado',
+  'LBL_SUGAR_LOGIN' => 'Es Usuario de Sugar',
+  'LBL_RECEIVE_NOTIFICATIONS' => 'Notificar al ser Asignado',
+  'LBL_IS_ADMIN' => 'Es Administrador',
   'LBL_GROUP' => 'Usuario de Grupo',
-  'LBL_PORTAL_ONLY'	=> 'Usuario Sólo de Portal',
-  'LBL_PHOTO'	=> 'Foto',
-  'LBL_DELETE_USER_CONFIRM' => 'Este Empleado es también un Usuario. Si elimina el registro de Empleado también eliminará el registro de Usuario, y el Usuario ya no podrá acceder a la aplicación. ¿Desea proceder con la eliminación del registro?',
-  'LBL_DELETE_EMPLOYEE_CONFIRM' => '¿Está seguro de que desea eliminar este empleado?',
+  'LBL_PORTAL_ONLY' => 'Usuario Sólo de Portal',
+  'LBL_PHOTO' => 'Foto',
+  'LBL_DELETE_USER_CONFIRM' => 'Este Empleado es un Usuario. Eliminando este Empleado también se eliminara el Usuario y el Usuario no podrá seguir accediendo a la aplicación. ¿Desea continuar con la eliminación de este registro?',
+  'LBL_DELETE_EMPLOYEE_CONFIRM' => '¿Está seguro que desea eliminar este Empleado?',
+  'LBL_ONLY_ACTIVE' => 'Empleados Activos',
+  'LBL_SELECT' => 'Seleccionar',
+  'LBL_FF_CLEAR' => 'Borrar',
+  'LBL_AUTHENTICATE_ID' => 'Id Autenticación',
+  'LBL_EXT_AUTHENTICATE' => 'Autenticación Externa',
+  'LBL_GROUP_USER' => 'Usuario del Grupo',
+  'LBL_LIST_ACCEPT_STATUS' => 'Aceptar Estato',
+  'LBL_MODIFIED_BY' => 'Modificado Por',
+  'LBL_MODIFIED_BY_ID' => 'Modificado por Id',
+  'LBL_CREATED_BY_NAME' => 'Creado por',
+  'LBL_PORTAL_ONLY_USER' => 'Usuario de la API del Portal',
+  'LBL_PSW_MODIFIED' => 'Último Cambio de la Contraseña',
+  'LBL_SHOW_ON_EMPLOYEES' => 'Visualización del Registro de Empleados',
+  'LBL_USER_HASH' => 'Contraseña:',
+  'LBL_SYSTEM_GENERATED_PASSWORD' => 'Contraseña Generada por el Sistema',
+  'LBL_DESCRIPTION' => 'Descripción',
+  'LBL_FAX_PHONE' => 'Fax:',
+  'LBL_STATUS' => 'Estado',
+  'LBL_ADDRESS_CITY' => 'Ciudad',
+  'LBL_ADDRESS_COUNTRY' => 'País',
+  'LBL_ADDRESS_POSTALCODE' => 'Código Postal',
+  'LBL_ADDRESS_STATE' => 'Estado/Provincia',
+  'LBL_ADDRESS_STREET' => 'Dirección',
+  'LBL_DATE_MODIFIED' => 'Fecha de Modificación',
+  'LBL_DATE_ENTERED' => 'Fecha de Creación',
+  'LBL_DELETED' => 'Eliminado',
 );
-
-
-?>

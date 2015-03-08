@@ -727,7 +727,7 @@ require_once('include/EditView/EditView2.php');
 
                  $operator = '=';
                  
-                 if (strpos($parms['value'],'%') !== FALSE ) {
+                 if ( ! is_array($parms['value']) && strpos($parms['value'],'%') !== FALSE ) {
                    $operator = 'like';
                  }
                  

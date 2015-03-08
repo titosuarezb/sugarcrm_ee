@@ -1,33 +1,71 @@
 <?php
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-/*********************************************************************************
- * The contents of this file are subject to the SugarCRM Public License Version
- * 1.1.3 ("License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at http://www.sugarcrm.com/SPL
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied.  See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * All copies of the Covered Code must include on each user interface screen:
- *    (i) the "Powered by SugarCRM" logo and
- *    (ii) the SugarCRM copyright notice
- * in the same form as they appear in the distribution.  See full license for
- * requirements.
- *
- * The Original Code is: SugarCRM Enterprise
- * The Initial Developer of the Original Code is SugarCRM, Inc.
- * Portions created by SugarCRM are Copyright (C) 2004-2010 SugarCRM, Inc.;
- * All Rights Reserved.
- ********************************************************************************/
-/*********************************************************************************
- * Description:  Defines the Spanish language pack for the base application.
- * $Id: es_es.lang.php,v 1.15 2010/08/03 16:25:51 aserrano Exp $
- * Source: SugarCRM 6.0.0
- * Contributor(s): Alberto Serrano (alb.serrano@gmail.com).
- ********************************************************************************/
 
-$mod_strings = array (
+if ( ! defined('sugarEntry') || ! sugarEntry) {
+  die('Not A Valid Entry Point');
+}
+
+/* * *******************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ * ****************************************************************************** */
+
+/* * *******************************************************************************
+
+ * Description:  Defines the Spanish language pack for the base application.
+ * Portions created by Tito Suarez Buitrago.
+ * All Rights Reserved.
+ * Contributor(s): Tito Suarez Buitrago - http://github.com/titosuarezb/
+ * ****************************************************************************** */
+
+$mod_strings = array(
+  'LBL_ID' => 'ID',
+  'LBL_DATE_ENTERED' => 'Fecha de Creación',
+  'LBL_DATE_MODIFIED' => 'Última Modificación',
+  'LBL_MODIFIED' => 'Modificado Por',
+  'LBL_MODIFIED_ID' => 'Modificada por ID',
+  'LBL_MODIFIED_NAME' => 'Modificada por Usuario',
+  'LBL_CREATED' => 'Creado Por',
+  'LBL_CREATED_ID' => 'Creada por ID',
+  'LBL_DESCRIPTION' => 'Descripción:',
+  'LBL_DELETED' => 'Eliminado',
+  'LBL_NAME' => 'Nombre Oportunidad',
+  'LBL_CREATED_USER' => 'Usuario Creado',
+  'LBL_MODIFIED_USER' => 'Usuario Modificado',
+  'LBL_LIST_NAME' => 'Nombre',
+  'LBL_EDIT_BUTTON' => 'Editar',
+  'LBL_REMOVE' => 'Quitar',
+  'LBL_ASSIGNED_TO_ID' => 'Usuario Asignado:',
+  'LBL_ASSIGNED_TO_NAME' => 'Asignado a:',
   'LBL_MODULE_NAME' => 'Oportunidades',
   'LBL_MODULE_TITLE' => 'Oportunidades: Inicio',
   'LBL_SEARCH_FORM_TITLE' => 'Búsqueda de Oportunidades',
@@ -35,7 +73,6 @@ $mod_strings = array (
   'LBL_LIST_FORM_TITLE' => 'Lista de Oportunidades',
   'LBL_OPPORTUNITY_NAME' => 'Nombre Oportunidad:',
   'LBL_OPPORTUNITY' => 'Oportunidad:',
-  'LBL_NAME' => 'Nombre Oportunidad',
   'LBL_INVITEE' => 'Contactos',
   'LBL_CURRENCIES' => 'Monedas',
   'LBL_LIST_OPPORTUNITY_NAME' => 'Nombre',
@@ -43,18 +80,15 @@ $mod_strings = array (
   'LBL_LIST_AMOUNT' => 'Cantidad de la Oportunidad',
   'LBL_LIST_AMOUNT_USDOLLAR' => 'Cantidad',
   'LBL_LIST_DATE_CLOSED' => 'Fecha Cierre',
-  'LBL_LIST_SALES_STAGE' => 'Etapa Ventas',
+  'LBL_LIST_SALES_STAGE' => 'Etapa de Ventas',
   'LBL_ACCOUNT_ID' => 'ID de Cuenta',
   'LBL_CURRENCY_ID' => 'ID de Moneda',
-  'LBL_CURRENCY_NAME'=>'Nombre de Moneda',
-  'LBL_CURRENCY_SYMBOL'=>'Símbolo de Moneda',
-  'LBL_TEAM_ID' => 'ID Equipo',
-//DON'T CONVERT THESE THEY ARE MAPPINGS
+  'LBL_CURRENCY_NAME' => 'Nombre de Moneda',
+  'LBL_CURRENCY_SYMBOL' => 'Símbolo de Moneda',
   'db_sales_stage' => 'LBL_LIST_SALES_STAGE',
   'db_name' => 'LBL_NAME',
   'db_amount' => 'LBL_LIST_AMOUNT',
   'db_date_closed' => 'LBL_LIST_DATE_CLOSED',
-//END DON'T CONVERT
   'UPDATE' => 'Oportunidad - Actualizar Moneda',
   'UPDATE_DOLLARAMOUNTS' => 'Actualizar Cantidades en Dólares EEUU',
   'UPDATE_VERIFY' => 'Verificar Cantidades',
@@ -76,7 +110,7 @@ $mod_strings = array (
   'UPDATE_RESTORE_COUNT' => 'Registros con cantidades restauradas:',
   'UPDATE_RESTORE' => 'Restaurar Cantidades',
   'UPDATE_RESTORE_TXT' => 'Restaura los valores de las cantidades desde la copia de seguridad creada durante la corrección.',
-  'UPDATE_FAIL' => 'No ha podido actualizarse - ',
+  'UPDATE_FAIL' => 'No ha podido actualizarse -',
   'UPDATE_NULL_VALUE' => 'La cantidad es NULL, estableciéndola a 0 -',
   'UPDATE_MERGE' => 'Unificar Monedas',
   'UPDATE_MERGE_TXT' => 'Unifica múltiples monedas en una única moneda. Si detecta que hay múltiples registros de tipo moneda para la misma moneda, puede unificarlas. Esto también unificará las monedas para el resto de módulos.',
@@ -84,19 +118,17 @@ $mod_strings = array (
   'LBL_AMOUNT' => 'Cantidad de la Oportunidad:',
   'LBL_AMOUNT_USDOLLAR' => 'Cantidad:',
   'LBL_CURRENCY' => 'Moneda:',
-  'LBL_DATE_CLOSED' => 'Fecha de cierre:',
+  'LBL_DATE_CLOSED' => 'Fecha de Cierre:',
   'LBL_TYPE' => 'Tipo:',
   'LBL_CAMPAIGN' => 'Campaña:',
-  'LBL_NEXT_STEP' => 'Próximo paso:',
-  'LBL_LEAD_SOURCE' => 'Toma de contacto:',
-  'LBL_SALES_STAGE' => 'Etapa de ventas:',
+  'LBL_NEXT_STEP' => 'Próximo Paso:',
+  'LBL_LEAD_SOURCE' => 'Toma de Contacto:',
+  'LBL_SALES_STAGE' => 'Etapa de Ventas:',
   'LBL_PROBABILITY' => 'Probabilidad (%):',
-  'LBL_DESCRIPTION' => 'Descripción:',
   'LBL_DUPLICATE' => 'Posible oportunidad duplicada',
   'MSG_DUPLICATE' => 'El registro para la oportunidad que va a crear podría ser un duplicado de otro registro de oportunidad existente. Los registros de oportunidad con nombres similares se listan a continuación.<br>Haga clic en Guardar para continuar con la creación de esta oportunidad, o en Cancelar para volver al módulo sin crear la oportunidad.',
   'LBL_NEW_FORM_TITLE' => 'Nueva Oportunidad',
   'LNK_NEW_OPPORTUNITY' => 'Nueva Oportunidad',
-  'LNK_OPPORTUNITY_REPORTS' => 'Ver Informes de Oportunidades',
   'LNK_OPPORTUNITY_LIST' => 'Ver Oportunidades',
   'ERR_DELETE_RECORD' => 'Debe especificar un número de registro a eliminar.',
   'LBL_TOP_OPPORTUNITIES' => 'Mis Principales Oportunidades',
@@ -108,27 +140,23 @@ $mod_strings = array (
   'LBL_RAW_AMOUNT' => 'Importe Bruto',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Clientes Potenciales',
   'LBL_CONTACTS_SUBPANEL_TITLE' => 'Contactos',
-  'LBL_QUOTES_SUBPANEL_TITLE' => 'Presupuestos',
+  'LBL_DOCUMENTS_SUBPANEL_TITLE' => 'Documentos',
   'LBL_PROJECTS_SUBPANEL_TITLE' => 'Proyectos',
-  'LBL_ASSIGNED_TO_NAME' => 'Asignado a:',
   'LBL_LIST_ASSIGNED_TO_NAME' => 'Usuario Asignado',
-  'LBL_CONTRACTS'=>'Contratos',
-  'LBL_CONTRACTS_SUBPANEL_TITLE'=>'Contratos',	
-  'LBL_LIST_SALES_STAGE'=>'Etapa de Ventas',
   'LBL_MY_CLOSED_OPPORTUNITIES' => 'Mis Oportunidades Cerradas',
   'LBL_TOTAL_OPPORTUNITIES' => 'Oportunidades Totales',
   'LBL_CLOSED_WON_OPPORTUNITIES' => 'Oportunidades Ganadas',
-  'LBL_ASSIGNED_TO_ID' =>'Usuario Asignado:',
-  'LBL_CREATED_ID'=>'Creada por ID',
-  'LBL_MODIFIED_ID'=>'Modificada por ID',
-  'LBL_MODIFIED_NAME'=>'Modificada por Usuario',
-  'LBL_CREATED_USER' => 'Usuario Creado',
-  'LBL_MODIFIED_USER' => 'Usuario Modificado',
   'LBL_CAMPAIGN_OPPORTUNITY' => 'Campañas',
   'LBL_PROJECT_SUBPANEL_TITLE' => 'Proyectos',
   'LABEL_PANEL_ASSIGNMENT' => 'Asignación',
   'LNK_IMPORT_OPPORTUNITIES' => 'Importar Oportunidades',
+  'LBL_EDITLAYOUT' => 'Editar diseño',
+  'LBL_EXPORT_CAMPAIGN_ID' => 'Id de campaña',
+  'LBL_OPPORTUNITY_TYPE' => 'Tipo de oportunidad',
+  'LBL_EXPORT_ASSIGNED_USER_NAME' => 'Usuario asignado',
+  'LBL_EXPORT_ASSIGNED_USER_ID' => 'ID Usuario asignado',
+  'LBL_EXPORT_MODIFIED_USER_ID' => 'Modificador por ID',
+  'LBL_EXPORT_CREATED_BY' => 'Creado por ID',
+  'LBL_EXPORT_NAME' => 'Nombre',
+  'LBL_CONTACT_HISTORY_SUBPANEL_TITLE' => 'Emails de contactos relacionados',
 );
-
-
-?>
